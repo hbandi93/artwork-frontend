@@ -7,6 +7,7 @@ ul{
   flex-direction: row;
   justify-content: space-around;
   list-style-type: none;
+  align-self: center;
 }
 
 li{
@@ -24,16 +25,10 @@ Link{
   pointer-events:none;
 }
 
-Link:active{
-  color: black;
-}
-
-Link:hover{
-  background-color: #735e25;
-}
-
 nav{
   background-color: #1998cf;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .App{
@@ -45,7 +40,20 @@ footer{
   bottom: 0;
   background-color: #1998cf;
   width: 100vw;
+  height: 20px;
   padding: 0;
   margin:0;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color: black
+}
+
+a:hover{
+  background-color: #325ce6;
 }
 

@@ -16,8 +16,8 @@ function App() {
         <header>
           <nav>
             <ul>
-              <li><Link style={{ textDecoration: 'none' }} to="/">Home</Link></li>
-              <li><Link style={{ textDecoration: 'none' }} to="/gallery">Gallery</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
               <li>Profile</li>
             </ul>
           </nav>
