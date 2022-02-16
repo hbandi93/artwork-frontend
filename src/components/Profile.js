@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import axios from "axios";
-import "../index.css";
+import "./profile.css";
 
 const INITIAL_STATE = {
   id: 0,
