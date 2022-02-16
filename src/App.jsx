@@ -1,4 +1,5 @@
 import Home from "./components/Home";
+import Gallery from "./components/Gallery";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -16,13 +17,14 @@ function App() {
           <nav>
             <ul>
               <li><Link style={{ textDecoration: 'none' }} to="/">Home</Link></li>
-              <li>Gallery</li>
+              <li><Link style={{ textDecoration: 'none' }} to="/gallery">Gallery</Link></li>
               <li>Profile</li>
             </ul>
           </nav>
         </header>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/gallery" element={<Gallery />}></Route>
         </Routes>
         <footer>Ez a footer</footer>
       </div>
