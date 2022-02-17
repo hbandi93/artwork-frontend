@@ -28,7 +28,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
-        <footer>Ez a footer</footer>
+        <footer>Copyright A|M|A</footer>
       </div>
     </Router>
   );

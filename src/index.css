@@ -1,5 +1,6 @@
 body {
-  background-color: #9c1422;
+  background-color: #FFF5F3;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul{
@@ -12,11 +13,10 @@ ul{
 
 li{
   font-size: 36px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 nav{
-  background-color: #e6d600;
+  background-color: #480910;
   width: 100vw;
   box-sizing: border-box;
 }
@@ -26,13 +26,13 @@ nav{
 }
 
 footer{
-  bottom: 0;
-  background-color: #e6d600;
+  position: absolute;
+  background-color: #480910;
   width: 100vw;
   height: 20px;
   padding: 0;
   margin:0;
-  
+  color: #fff;
 }
 
 a{
@@ -40,7 +40,7 @@ a{
 }
 
 a:visited{
-  color: black
+  color: #fff
 }
 
 a:hover{
