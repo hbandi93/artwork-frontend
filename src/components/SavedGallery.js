@@ -19,8 +19,8 @@ export default function SavedGallery() {
         images={[
           {
             src:
-              "https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445_960_720.jpg",
-            lightboxCaption: "image caption",
+              "https://cdn.pixabay.com/photo/2017/10/31/07/49/horses-2904536_960_720.jpg",
+            lightboxCaption: "custom tag 1",
             lightboxTitle: "image title",
             orderS: 1,
             orderM: 1,
@@ -29,34 +29,35 @@ export default function SavedGallery() {
           {
             src:
               "https://cdn.pixabay.com/photo/2019/03/09/17/30/horse-4044547_960_720.jpg",
+              lightboxCaption: "custom tag 2",
             orderS: 2,
             orderM: 2,
             orderL: 2
           },
           {
             src:
-              "https://cdn.pixabay.com/photo/2016/12/04/21/58/rabbit-1882699_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2021/02/05/20/38/abstract-5985788_960_720.jpg",
             orderS: 4,
             orderM: 3,
             orderL: 6
           },
           {
             src:
-              "https://cdn.pixabay.com/photo/2014/07/08/12/36/bird-386725_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2018/04/22/21/30/bird-3342446_960_720.jpg",
             orderS: 3,
             orderM: 4,
             orderL: 5
           },
           {
             src:
-              "https://cdn.pixabay.com/photo/2015/10/12/15/46/fallow-deer-984573_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2019/09/24/06/10/red-4500348_960_720.jpg",
             orderS: 5,
             orderM: 6,
             orderL: 4
           },
           {
             src:
-              "https://cdn.pixabay.com/photo/2014/10/01/10/44/hedgehog-468228_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2014/10/29/19/15/graffiti-508272_960_720.jpg",
             orderS: 6,
             orderM: 5,
             orderL: 3,
@@ -64,11 +65,11 @@ export default function SavedGallery() {
           }
         ]}
         screenWidthSizes={{
-          xs: 400,
-          s: 600,
-          m: 800,
-          l: 1000,
-          xl: 1200
+          xs: 600,
+          s: 800,
+          m: 1000,
+          l: 1200,
+          xl: 1400
         }}
         numOfImagesPerRow={{
           xs: 1,
