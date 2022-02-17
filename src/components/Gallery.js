@@ -9,7 +9,7 @@ class Gallery extends Component {
     }
     async componentDidMount() {
         let source = []
-        let i = 0
+        let i = 33
         while (source.length < 11) {
             i = i + 1
             await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + i)
@@ -29,7 +29,7 @@ class Gallery extends Component {
             < div >
                 <h1>This is our gallery.</h1>
                 {this.state.src.map(elem => {
-                    return <div>
+                    return <div className='imgContainer'>
                         <h2>{elem.objectName}</h2>
                         <img src={elem.primaryImageSmall} alt="Kép" />
                     </div>

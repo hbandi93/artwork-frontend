@@ -1,5 +1,5 @@
 body {
-  background-color: #735e25;
+  background-color: #9c1422;
 }
 
 ul{
@@ -15,18 +15,8 @@ li{
   font-family: 'Montserrat', sans-serif;
 }
 
-li:visited{
-  color: black;
-}
-
-Link{
-  text-decoration: none;
-  color:inherit;
-  pointer-events:none;
-}
-
 nav{
-  background-color: #1998cf;
+  background-color: #e6d600;
   width: 100vw;
   box-sizing: border-box;
 }
@@ -38,7 +28,7 @@ nav{
 footer{
   position: fixed;
   bottom: 0;
-  background-color: #1998cf;
+  background-color: #e6d600;
   width: 100vw;
   height: 20px;
   padding: 0;
@@ -54,6 +44,6 @@ a:visited{
 }
 
 a:hover{
-  background-color: #325ce6;
+  background-color: #9c9a89;
 }
 
