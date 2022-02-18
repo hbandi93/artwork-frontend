@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import ImageClicker from './ImageClicker';
 
 const Gallery = ({ objectID }) => {
     const [page, setPage] = useState(1)
@@ -40,8 +41,8 @@ const Gallery = ({ objectID }) => {
 
     useEffect(() => {
         fetchImages()
-        // console.log("source: ", source, "index: ", index, "page: ", page);
     }, [page])
+
     return (
         < div key={page}>
             <h1>This is our gallery.</h1>
@@ -49,12 +50,7 @@ const Gallery = ({ objectID }) => {
                 <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
                 <button onClick={browse}>Search</button>
             </label>
-            {source.map(elem => {
-                return <div className='imgContainer' key={elem.accessionNumber}>
-                    <h2>{elem.objectName}</h2>
-                    <img src={elem.primaryImageSmall} alt="Kép" />
-                </div>
-            })}
+            {source.map(elem => <ImageClicker elem={elem} key={elem.accessionNumber} />)}
             <button onClick={previousPage} disabled={page === 1}>Previous page</button>
             <button onClick={nextPage}>Next page</button>
         </div >

@@ -1,6 +1,7 @@
 import Home from "./components/Home";
 import GalleryPage from "./components/GalleryPage";
 import Profile from "./components/Profile";
+import ImageDetails from "./components/ImageDetails";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/gallery" element={<GalleryPage />}></Route>
+          <Route path="/gallery/images/:id" element={<ImageDetails />} />
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
         <footer>Copyright A|M|A</footer>
