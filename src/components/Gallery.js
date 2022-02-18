@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import handleSearch from './Search';
 
 class Gallery extends Component {
     state = {
@@ -28,10 +29,12 @@ class Gallery extends Component {
         return (
             < div >
                 <h1>This is our gallery.</h1>
+                <input placeholder='search' onChange={(event) =>handleSearch(event)}></input>
                 {this.state.src.map(elem => {
                     return <div className='imgContainer'>
                         <h2>{elem.objectName}</h2>
                         <img src={elem.primaryImageSmall} alt="Kép" />
+
                     </div>
                 })}
             </div >
