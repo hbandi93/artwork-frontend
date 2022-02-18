@@ -1,18 +1,22 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-const Gallery = () => {
+const Gallery = ({ objectID }) => {
     const [page, setPage] = useState(1)
     const [source, setSource] = useState([])
-    const [index, setIndex] = useState(34)
+    const [index, setIndex] = useState(0)
+    const [search, setSearch] = useState("")
+
+    const browse = () => {
+
+    }
 
     const fetchImages = async () => {
         let data = []
         let i = index
         while (data.length < 1) {
-            await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + i)
+            await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + objectID[i])
                 .then(res => {
-                    console.log(res.data.isPublicDomain);
                     if (res.data.isPublicDomain) {
                         data.push(res.data)
                     }
@@ -27,7 +31,7 @@ const Gallery = () => {
 
     const previousPage = () => {
         if (page >= 1) {
-            setIndex(index - 1)
+            setIndex(index - 2)
             setPage(page - 1)
         }
     }
@@ -38,11 +42,15 @@ const Gallery = () => {
 
     useEffect(() => {
         fetchImages()
-        console.log("source: ", source, "index: ", index, "page: ", page);
+        // console.log("source: ", source, "index: ", index, "page: ", page);
     }, [page])
     return (
         < div key={page}>
             <h1>This is our gallery.</h1>
+            <label>Search:
+                <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
+                <button onClick={browse}>Search</button>
+            </label>
             {source.map(elem => {
                 return <div className='imgContainer' key={elem.accessionNumber}>
                     <h2>{elem.objectName}</h2>

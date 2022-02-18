@@ -1,5 +1,5 @@
 import Home from "./components/Home";
-import Gallery from "./components/Gallery";
+import GalleryPage from "./components/GalleryPage";
 import Profile from "./components/Profile";
 import React from "react";
 import {
@@ -25,7 +25,7 @@ function App() {
         </header>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/gallery" element={<Gallery />}></Route>
+          <Route path="/gallery" element={<GalleryPage />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
         <footer>Copyright A|M|A</footer>
