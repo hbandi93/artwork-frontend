@@ -6,6 +6,7 @@ const Gallery = ({ objectID }) => {
     const [source, setSource] = useState([])
     const [index, setIndex] = useState(0)
     const [search, setSearch] = useState("")
+    const displayNumberOfImages = 20
 
     const browse = () => {
 
@@ -14,13 +15,10 @@ const Gallery = ({ objectID }) => {
     const fetchImages = async () => {
         let data = []
         let i = index
-        while (data.length < 1) {
+        while (data.length < displayNumberOfImages) {
             await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + objectID[i])
                 .then(res => {
-                    if (res.data.isPublicDomain) {
-                        data.push(res.data)
-                    }
-                    else { return }
+                    data.push(res.data)
                 })
                 .catch(err => { return })
             i = i + 1
@@ -31,7 +29,7 @@ const Gallery = ({ objectID }) => {
 
     const previousPage = () => {
         if (page >= 1) {
-            setIndex(index - 2)
+            setIndex(index - (displayNumberOfImages * 2))
             setPage(page - 1)
         }
     }
