@@ -7,7 +7,7 @@ const Gallery = ({ objectID, browse }) => {
     const [source, setSource] = useState([])
     const [index, setIndex] = useState(0)
     const [search, setSearch] = useState("")
-    const displayNumberOfImages = 20
+    const displayNumberOfImages = 10
 
     const fetchImages = async () => {
 
