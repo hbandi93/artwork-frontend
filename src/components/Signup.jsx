@@ -62,31 +62,31 @@ class SignUp extends Component {
                             placeholder='Full name'
                             onChange={this.changeFullName}
                             value={this.state.fullName}
-                            className='form-control form-group'
+                            className='signup-form-fields'
                             />
 
                             <input type="text" 
                             placeholder='Username'
                             onChange={this.changeUsername}
                             value={this.state.username}
-                            className='form-control form-group'
+                            className='signup-form-fields'
                             />
 
                             <input type="text" 
                             placeholder='E-mail'
                             onChange={this.changeEmail}
                             value={this.state.email}
-                            className='form-control form-group'
+                            className='signup-form-fields'
                             />
 
                             <input type="password" 
                             placeholder='Password'
                             onChange={this.changePassword}
                             value={this.state.password}
-                            className='form-control form-group'
+                            className='signup-form-fields'
                             />
 
-                            <input type="submit" className='btn btn-danger btn-block' value='Submit' />
+                            <input type="submit" className='signup-submit-btn' value='Submit' />
                         </form>
                     </div>
                 </div>
