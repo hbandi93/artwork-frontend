@@ -1074,7 +1074,7 @@
   "resolved" "https://registry.npmjs.org/@blueprintjs/colors/-/colors-4.0.0-alpha.2.tgz"
   "version" "4.0.0-alpha.2"
 
-"@blueprintjs/core@^3.40.0":
+"@blueprintjs/core@^3.53.0":
   "integrity" "sha512-cvoJJtnPrBgaVvWhfHoFi/zH+Bk4VPDqbG4DdBl+BPK5MyvvkcBP/oX/iVG1qgwdvQ9FqUsHpuCLLgF6j8bItA=="
   "resolved" "https://registry.npmjs.org/@blueprintjs/core/-/core-3.53.0.tgz"
   "version" "3.53.0"
