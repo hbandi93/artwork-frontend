@@ -8,16 +8,15 @@ const ImageDetails = () => {
 
     const sendImage = async () => {
         try {
-            const response = await axios.post('10.0.0.202:8080/images/tibor',
-                {
-                    url: {
-                        image_id: imageDetails.objectID,
-                        title: imageDetails.title,
-                        content: imageDetails.primaryImageSmall,
-                        category: imageDetails.objectName,
-                        artist: imageDetails.artistDisplayName
-                    }
-                })
+            const response = await axios.post('http://10.0.0.202:8080/images/tibor',
+                [{
+                    image_id: imageDetails.objectID,
+                    title: imageDetails.title,
+                    content: imageDetails.primaryImageSmall,
+                    category: imageDetails.objectName,
+                    artist: imageDetails.artistDisplayName
+                }]
+            )
             alert('todo created')
         }
         catch (e) {
