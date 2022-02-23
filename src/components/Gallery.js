@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import ImageClicker from './ImageClicker';
+import './gallery.css'
 
 const Gallery = ({ objectID }) => {
     const [page, setPage] = useState(1)
     const [source, setSource] = useState([])
     const [index, setIndex] = useState(0)
     const [search, setSearch] = useState("")
-    const displayNumberOfImages = 20
+    const displayNumberOfImages = 12
 
     const browse = () => {
 
@@ -45,14 +46,20 @@ const Gallery = ({ objectID }) => {
 
     return (
         < div key={page}>
-            <h1>This is our gallery.</h1>
-            <label>Search:
-                <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
+            <div className='searchbar'>
+                <h1>This is our gallery.</h1>
+                <label>Search:
+                    <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
                 <button onClick={browse}>Search</button>
-            </label>
-            {source.map(elem => <ImageClicker elem={elem} key={elem.accessionNumber} />)}
-            <button onClick={previousPage} disabled={page === 1}>Previous page</button>
-            <button onClick={nextPage}>Next page</button>
+                </label>
+            </div>
+            <button class="page" onClick={previousPage} disabled={page === 1}>Previous page</button>
+            <button class="page" onClick={nextPage}>Next page</button>
+            <div className="photoGallery">
+                {source.map(elem => <ImageClicker elem={elem} key={elem.accessionNumber} />)}
+            <button class="page" onClick={previousPage} disabled={page === 1}>Previous page</button>
+            <button class="page" onClick={nextPage}>Next page</button>
+            </div>
         </div >
     );
 }
