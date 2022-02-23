@@ -1,10 +1,16 @@
 import ResponsiveGallery from "react-responsive-gallery";
+import { UserContext } from "../context/UserContext";
+import React, { useCallback, useContext, useEffect } from "react";
 import "./profile.css";
 
 export default function SavedGallery() {
+  const [userContext] = useContext(UserContext);
   return (
+    
     <div className="SavedGallery">
-      <h3>[username]'s saved pictures</h3>
+      <h3>{userContext.details.firstName}
+              {userContext.details.lastName &&
+                " " + userContext.details.lastName}'s saved artworks</h3>
       <h4>
         Search by keywords
       </h4>

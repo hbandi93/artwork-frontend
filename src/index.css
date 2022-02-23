@@ -1,3 +1,6 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 body {
   background-color: #FFF5F3;
   font-family: 'Roboto', sans-serif;
@@ -45,5 +48,21 @@ a:visited{
 
 a:hover{
   background-color: #9c9a89;
+}
+.auth-form {
+  margin-top: 10px;
+}
+
+.loader {
+  margin: 100px auto;
+}
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+}
+.user-actions {
+  display: flex;
+  flex-direction: column;
 }
 
