@@ -8,7 +8,7 @@ const ImageDetails = () => {
 
     const sendImage = async () => {
         try {
-            const response = await axios.post('http://localhost:4000/',
+            const response = await axios.post('10.0.0.202/images/tibor',
                 {
                     url: {
                         image_id: imageDetails.objectID,
