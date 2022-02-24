@@ -1,45 +1,63 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import handleSearch from './Search';
+import ImageClicker from './ImageClicker';
 
-class Gallery extends Component {
-    state = {
-        page: 1,
-        src: [],
-        ind: 0
-    }
-    async componentDidMount() {
-        let source = []
-        let i = 33
-        while (source.length < 11) {
+const Gallery = ({ objectID, browse }) => {
+    const [page, setPage] = useState(1)
+    const [source, setSource] = useState([])
+    const [index, setIndex] = useState(0)
+    const [search, setSearch] = useState("")
+    const displayNumberOfImages = 10
+
+    const fetchImages = async () => {
+
+        if (!objectID) return
+
+        let data = []
+        let i = index
+
+        while (data.length < displayNumberOfImages && data.length !== objectID.length) {
+            if (objectID[i]) {
+                await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + objectID[i])
+                    .then(res => {
+                        data.push(res.data)
+                    })
+                    .catch(err => { return })
+            }
             i = i + 1
-            await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + i)
-                .then(res => {
-                    console.log(res.data.isPublicDomain);
-                    if (res.data.isPublicDomain) {
-                        source.push(res.data)
-                    }
-                    else { return }
-                })
-                .catch(err => { return })
         }
-        this.setState({ src: source, ind: i })
+        setSource(data)
+        setIndex(i)
     }
-    render() {
-        return (
-            < div >
-                <h1>This is our gallery.</h1>
-                <input placeholder='search' onChange={(event) =>handleSearch(event)}></input>
-                {this.state.src.map(elem => {
-                    return <div className='imgContainer'>
-                        <h2>{elem.objectName}</h2>
-                        <img src={elem.primaryImageSmall} alt="Kép" />
 
-                    </div>
-                })}
-            </div >
-        );
+    const previousPage = () => {
+        if (page >= 1) {
+            setIndex(index - (displayNumberOfImages * 2))
+            setPage(page - 1)
+        }
     }
+
+    const nextPage = () => {
+        setPage(page + 1)
+    }
+
+    useEffect(() => {
+        fetchImages()
+    }, [page])
+
+    return (
+        < div key={`${page}`}>
+            <h1>This is our gallery.</h1>
+            <label>Search:
+                <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
+                <button onClick={() => browse(search)}>Search</button>
+            </label>
+            {!objectID || objectID.length === 0 ? <div>No result found</div> : ""}
+            {source.map(elem => <ImageClicker elem={elem} key={elem.accessionNumber} />)}
+            <button onClick={previousPage} disabled={page === 1}>Previous page</button>
+            <button onClick={nextPage}>Next page</button>
+        </div >
+    );
 }
 
 export default Gallery;
