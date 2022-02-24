@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { UserContext } from "../context/UserContext";
 
 const ImageDetails = () => {
     let { id } = useParams();
     const [imageDetails, setImageDetails] = useState(undefined)
+    const [userContext] = useContext(UserContext);
 
     const sendImage = async () => {
         try {
-            const response = await axios.post('http://10.0.0.202:8080/images/tibor',
+            const response = await axios.post(`http://localhost:4000/images/${userContext.details.firstName}`,
                 [{
                     image_id: imageDetails.objectID,
                     title: imageDetails.title,
@@ -17,10 +19,14 @@ const ImageDetails = () => {
                     artist: imageDetails.artistDisplayName
                 }]
             )
-            alert('todo created')
+            if (response.status === 200) {
+                alert("Kecske")
+            }
+            console.log(userContext);
         }
         catch (e) {
             alert('error')
+            console.log(userContext);
         }
     }
 
