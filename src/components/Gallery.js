@@ -8,7 +8,7 @@ const Gallery = ({ objectID }) => {
     const [source, setSource] = useState([])
     const [index, setIndex] = useState(0)
     const [search, setSearch] = useState("")
-    const displayNumberOfImages = 12
+    const displayNumberOfImages = 15
 
     const browse = () => {
 
@@ -48,17 +48,15 @@ const Gallery = ({ objectID }) => {
         < div key={page}>
             <div className='searchbar'>
                 <h1>This is our gallery.</h1>
-                <label>Search:
-                    <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
+                <label>
+                    <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} placeholder="Search" />
                 <button onClick={browse}>Search</button>
                 </label>
             </div>
-            <button class="page" onClick={previousPage} disabled={page === 1}>Previous page</button>
+            <button class="page" onClick={previousPage} disabled={page === 1}>Prev. page</button>
             <button class="page" onClick={nextPage}>Next page</button>
             <div className="photoGallery">
                 {source.map(elem => <ImageClicker elem={elem} key={elem.accessionNumber} />)}
-            <button class="page" onClick={previousPage} disabled={page === 1}>Previous page</button>
-            <button class="page" onClick={nextPage}>Next page</button>
             </div>
         </div >
     );
