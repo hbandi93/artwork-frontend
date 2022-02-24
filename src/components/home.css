@@ -3,4 +3,25 @@ p{
     height: 40px;
     font-size: 20px;
     width: fit-content;
+
+    margin-left: 20px;
+    margin-top: 5%;
+}
+
+.home{
+    position: relative;
+    margin-top: 10%;
+}
+
+.homebtn{
+    width: 200px;
+    margin-left: 300px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+h1{
+    color:white;
+    width: fit-content;
+    height: 50px;
 }

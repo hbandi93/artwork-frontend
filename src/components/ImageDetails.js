@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import './imageDetails.css';
+import './gallery.css'
 
 const ImageDetails = () => {
     let { id } = useParams();
@@ -37,13 +39,13 @@ const ImageDetails = () => {
     }, [id])
 
     return (
-        <div> {imageDetails ? <div>
+        <div > {imageDetails ? <div>
             <div>Details </div>
-            <div><img src={imageDetails.primaryImageSmall} alt="kép" /></div>
-            <div>Author : {imageDetails.artistDisplayName}</div>
-            {imageDetails.title !== "" ? <div>Title : {imageDetails.title}</div> : <div>Title : No title</div>}
-            <div>Year : {imageDetails.accessionYear}</div>
-            <button onClick={sendImage}>Add to favourites</button>
+            <div className="imgInfo"><img src={imageDetails.primaryImageSmall} alt="kép" /></div>
+            <div className="imgInfo">Author : {imageDetails.artistDisplayName}</div>
+            {imageDetails.title !== "" ? <div>Title : {imageDetails.title}</div> : <div className="imgInfo">Title : No title</div>}
+            <div className="imgInfo">Year : {imageDetails.accessionYear}</div>
+            <button className="addtofavbtn" onClick={sendImage}>Add to favourites</button>
         </div> : "image Not found"}
         </div>
     )

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+}
+
+button {
+  padding: 2px;
+  margin-left: 10px;
+  width: 120px;
+  height: 50px;
+  border-radius: 1.7em;
+
+  font-size: 17px;
+}
+
+.page {
+    
+    margin-bottom: 30px;
+}
+
+.photoGallery {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.imgContainer{
+  flex: 2 0 21%;
+  margin: 5px;
+  
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.searchbar {
+    position: relative;
+    
+}
+label {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+h1 {
+    margin: 20px;
+}

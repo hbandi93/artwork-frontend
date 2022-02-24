@@ -1,0 +1,24 @@
+.imgInfo{
+    display: inline-block;
+    font-size: large;
+    background-color: #FFF5F3;
+}
+
+.addtofavbtn{
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    left: 20px;
+    top: 100%;
+    font-weight: bold;
+}
+
+h2{
+    display:none;
+}
+
+h2:hover + h2{
+    display: block;
+    color:red;
+}
