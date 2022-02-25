@@ -3,7 +3,7 @@
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 body {
   background-color: #fff5f3;
-  
+
   font-family: "Roboto", sans-serif;
 }
 
@@ -31,14 +31,14 @@ nav {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   background-color: #480910;
   width: 100vw;
   height: 20px;
   padding: 0;
   margin: 0;
   color: #fff;
- 
+  bottom: 0;
 }
 
 a {
@@ -46,9 +46,14 @@ a {
 }
 
 a:hover {
-  background-color: #FCD757;
+  color: #fcd757;
 }
-
+a:active {
+  color: #fcd757;
+}
+a:visited {
+  color: white;
+}
 
 .auth-form {
   margin-top: 10px;
@@ -66,4 +71,3 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-

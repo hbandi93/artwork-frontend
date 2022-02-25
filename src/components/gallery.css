@@ -13,8 +13,7 @@ button {
 }
 
 .page {
-    
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .photoGallery {
@@ -25,11 +24,80 @@ button {
   justify-content: space-around;
   align-content: flex-start;
 }
+@media screen and (max-width: 900px) {
+  li {
+    font-size: 25px;
+  }
+}
 
-.imgContainer{
+@media screen and (max-width: 800px) {
+  li {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  li {
+    font-size: 17px;
+    margin-left: 5px;
+  }
+  .welcomeText, .user-details {
+    transform: scale(0.5);
+    font-size: 17px;
+
+}
+}
+@media screen and (max-width: 600px) {
+  li {
+    margin-left: 5px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .searchbar, .page, nav {
+    transform: scale(0.6);
+  }
+  li {
+    font-size: 15px;
+  }
+  .welcomeText {
+    transform: scale(0.4);
+    font-size: 15px;
+    
+  }
+  .page1 {
+    margin-left: 150px;
+  }
+  .page {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .page1 {
+    margin-left: 100px;
+  }
+  li {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .photoGallery {
+    
+  }
+  
+  .page1 {
+    margin-left: 70px;
+  }
+}
+
+
+.imgContainer {
   flex: 2 0 21%;
   margin: 5px;
-  
 }
 
 img {
@@ -47,16 +115,16 @@ img {
 }
 
 .searchbar {
-    position: relative;
-    
+  position: relative;
 }
 label {
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
-    font-size: 17px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  font-size: 17px;
 }
 
 h1 {
-    margin: 20px;
+  margin: 20px;
+  color: black;
 }

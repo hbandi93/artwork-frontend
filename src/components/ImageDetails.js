@@ -40,12 +40,15 @@ const ImageDetails = () => {
 
     return (
         <div > {imageDetails ? <div>
-            <div>Details </div>
-            <div className="imgInfo"><img src={imageDetails.primaryImageSmall} alt="kép" /></div>
-            <div className="imgInfo">Author : {imageDetails.artistDisplayName}</div>
-            {imageDetails.title !== "" ? <div>Title : {imageDetails.title}</div> : <div className="imgInfo">Title : No title</div>}
-            <div className="imgInfo">Year : {imageDetails.accessionYear}</div>
-            <button className="addtofavbtn" onClick={sendImage}>Add to favourites</button>
+            {imageDetails.title !== "" ? <div className="imgInfo imgTitle"> {imageDetails.title}</div> : <div className="imgInfo">Title : No title</div>}
+            <div className="imgInfoMain">
+                <div className="imgInfo imgPicture"><img src={imageDetails.primaryImageSmall} alt="kép" /></div>
+                <div className="imgDescriptionMain">
+                    <div className="imgInfo imgDescription">Author : {imageDetails.artistDisplayName}</div>
+                    <div className="imgInfo imgDescription imgDescription2">Year : {imageDetails.accessionYear}</div>
+                </div>
+            </div>
+                <button className="addtofavbtn" onClick={sendImage}>Add to favourites</button>
         </div> : "image Not found"}
         </div>
     )

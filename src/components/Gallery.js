@@ -56,7 +56,7 @@ const Gallery = ({ objectID, browse }) => {
                 </label>
             </div>
             {!objectID || objectID.length === 0 ? <div>No result found</div> : ""}
-            <button class="page" onClick={previousPage} disabled={page === 1}>Prev. page</button>
+            <button class="page page1" onClick={previousPage} disabled={page === 1}>Prev. page</button>
             <button class="page" onClick={nextPage}>Next page</button>
             <div className="photoGallery">
                 {source.map(elem => <ImageClicker elem={elem} key={elem.accessionNumber} />)}

@@ -1,7 +1,38 @@
 .imgInfo{
-    display: inline-block;
-    font-size: large;
+    font-size: 20px;
     background-color: #FFF5F3;
+}
+
+.imgInfoMain{
+    display: flex;
+    flex-direction: row;
+}
+
+.imgTitle {
+    display: block;
+    font-size: 40px;
+    margin: 30px;
+}
+.imgDescriptionMain{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgDescription{
+    display: inline;
+    margin-left: 50px;
+}
+.imgDescription2{
+    position: absolute;
+    top: 40px;
+}
+
+
+.imgPicture {
+    display: inline-block;
+    justify-content: left;
+    margin-left: 20px;
 }
 
 .addtofavbtn{
@@ -9,10 +40,19 @@
     display: block;
     margin-top: 20px;
     margin-bottom: 30px;
+    margin-left: 350px;
     left: 20px;
     top: 100%;
     font-weight: bold;
 }
+
+.addtofavbtn:hover {
+        cursor: pointer;
+        transform: scale(1.3);
+        -webkit-transition: transform 0.6s ease-in-out;
+        color: red;
+}
+
 
 h2{
     display:none;
@@ -22,3 +62,4 @@ h2:hover + h2{
     display: block;
     color:red;
 }
+

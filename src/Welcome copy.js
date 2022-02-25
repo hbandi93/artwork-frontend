@@ -74,7 +74,7 @@ const Welcome = () => {
     <Card elevation="1">
       <div className="user-details">
         <div>
-          <p>
+          <p className="welcomeText">
             Welcome&nbsp;
             <strong>
               {userContext.details.firstName}

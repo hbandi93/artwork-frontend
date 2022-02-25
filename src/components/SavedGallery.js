@@ -14,13 +14,13 @@ export default function SavedGallery() {
       <h4>
         Search by keywords
       </h4>
-      <label>Search: 
+      <label> 
         <input 
           type="text" 
           placeholder="search"
         />
         </label>
-      <ResponsiveGallery
+      <ResponsiveGallery 
         useLightBox
         images={[
           {
