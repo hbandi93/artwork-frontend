@@ -53,7 +53,7 @@ function App() {
   }, [syncLogout]);
 
   return userContext.token === null ? (
-    <><div className="loginWelcome"><p className="welcomeText">Welcome to Afremov Gallery App</p>
+    <><div className="loginWelcome"><p className="welcomeText">Welcome to Afremov Gallery App v0.1</p>
     <p className="welcomeLogin">Please login or register to use this site</p>
     </div>
     <div className="loginForm">
