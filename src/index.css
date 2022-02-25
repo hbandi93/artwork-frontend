@@ -59,6 +59,16 @@ a:visited {
   margin-top: 10px;
 }
 
+.loginForm {
+  position:relative;
+  display: flex;
+  min-width: 100px;
+  max-width: 25%;
+  margin-top: 50px;
+  align-items: center;
+  margin-left: 43%;
+
+}
 .loader {
   margin: 100px auto;
 }
@@ -70,4 +80,19 @@ a:visited {
 .user-actions {
   display: flex;
   flex-direction: column;
+}
+
+.loginWelcome {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcomeText {
+  margin-top: 50px;
+  font-size:xx-large;
+}
+.welcomeLogin {
+  font-size: medium;
 }

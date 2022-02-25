@@ -56,21 +56,21 @@ const Register = () => {
       {error && <Callout intent="danger">{error}</Callout>}
 
       <form onSubmit={formSubmitHandler} className="auth-form">
-        <FormGroup label="First Name" labelFor="firstName">
+        <FormGroup label="" labelFor="firstName">
           <InputGroup
             id="firstName"
             placeholder="First Name"
             onChange={(e) => setFirstName(e.target.value)}
           />
         </FormGroup>
-        <FormGroup label="Last Name" labelFor="firstName">
+        <FormGroup label="" labelFor="firstName">
           <InputGroup
             id="lastName"
             placeholder="Last Name"
             onChange={(e) => setLastName(e.target.value)}
           />
         </FormGroup>
-        <FormGroup label="Email" labelFor="email">
+        <FormGroup label="" labelFor="email">
           <InputGroup
             id="email"
             type="email"
@@ -78,7 +78,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </FormGroup>
-        <FormGroup label="Password" labelFor="password">
+        <FormGroup label="  " labelFor="password">
           <InputGroup
             id="password"
             placeholder="Password"
@@ -87,7 +87,7 @@ const Register = () => {
           />
         </FormGroup>
         <Button
-          intent="primary"
+          intent="warning"
           disabled={isSubmitting}
           text={`${isSubmitting ? "Registering" : "Register"}`}
           fill

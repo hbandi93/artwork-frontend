@@ -53,13 +53,18 @@ function App() {
   }, [syncLogout]);
 
   return userContext.token === null ? (
-    <Card elevation="1">
-      <Tabs id="Tabs" onChange={setCurrentTab} selectedTabId={currentTab}>
-        <Tab id="login" title="Login" panel={<Login />} />
-        <Tab id="register" title="Register" panel={<Register />} />
-        <Tabs.Expander />
-      </Tabs>
-    </Card>
+    <><div className="loginWelcome"><p className="welcomeText">Welcome to Afremov Gallery App v0.1</p>
+    <p className="welcomeLogin">Please login or register to use this site</p>
+    </div>
+    <div className="loginForm">
+      <Card elevation="1">
+        <Tabs id="Tabs" onChange={setCurrentTab} selectedTabId={currentTab}>
+          <Tab id="login" title="Login" panel={<Login />} />
+          <Tab id="register" title="Register" panel={<Register />} />
+          <Tabs.Expander />
+        </Tabs>
+      </Card>
+    </div></>
   ) : userContext.token ? (
     <Welcome />
   ) : (
