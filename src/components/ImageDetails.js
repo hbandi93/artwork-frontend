@@ -10,7 +10,7 @@ const ImageDetails = () => {
 
     const sendImage = async () => {
         try {
-            const response = await axios.post('http://10.0.0.202:8080/images/tibor',
+            const response = await axios.post('http://18.157.53.210:4000/images/tibor',
                 [{
                     image_id: imageDetails.objectID,
                     title: imageDetails.title,
@@ -48,7 +48,7 @@ const ImageDetails = () => {
                     <div className="imgInfo imgDescription imgDescription2">Year : {imageDetails.accessionYear}</div>
                 </div>
             </div>
-            <button className="addtofavbtn" onClick={sendImage}>Add to favourites</button>
+            <button className="addtofavbtn" onClick={sendImage} disabled>(Doesn't work)</button>
         </div> : "image Not found"}
         </div>
     )
