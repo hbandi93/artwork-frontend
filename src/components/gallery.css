@@ -16,6 +16,12 @@ button {
   margin-bottom: 30px;
 }
 
+.imgContainer:hover{
+  background-color: #fcd757;
+  transform: scale(1.1);
+  margin-bottom: 20px;
+}
+
 .photoGallery {
   display: flex;
   gap: 50px;
