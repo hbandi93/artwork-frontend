@@ -48,7 +48,7 @@ const ImageDetails = () => {
                     <div className="imgInfo imgDescription imgDescription2">Year : {imageDetails.accessionYear}</div>
                 </div>
             </div>
-                <button className="addtofavbtn" onClick={sendImage}>Add to favourites</button>
+            <button className="addtofavbtn" onClick={sendImage}>Add to favourites</button>
         </div> : "image Not found"}
         </div>
     )
