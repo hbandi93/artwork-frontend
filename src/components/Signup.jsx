@@ -49,7 +49,7 @@ class SignUp extends Component {
             password: this.state.password
         }
 
-        axios.post('http://18.157.53.210:4000/signup', registered)
+        axios.post('http://localhost:4000/signup', registered)
             .then(response => console.log(response.data))
     }
     render() {

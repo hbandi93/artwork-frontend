@@ -10,7 +10,7 @@ const ImageDetails = () => {
 
     const sendImage = async () => {
         try {
-            const response = await axios.post('http://18.157.53.210:4000/images/tibor',
+            const response = await axios.post('http://localhost:4000/images/tibor',
                 [{
                     image_id: imageDetails.objectID,
                     title: imageDetails.title,
