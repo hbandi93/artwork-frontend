@@ -103,7 +103,7 @@ const Welcome = () => {
             text="Logout"
             onClick={logoutHandler}
             
-            intent="primary" /></li>
+            intent="warning" /></li>
                 </ul>
               </nav>
             </header>

@@ -1,6 +1,7 @@
 import { Button, Callout, FormGroup, InputGroup } from "@blueprintjs/core";
 import React, { useContext, useState } from "react";
 import { UserContext } from "./context/UserContext";
+import "./login.css"
 
 const Login = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,10 +46,10 @@ const Login = () => {
       });
   };
   return (
-    <>
+    <><div className="loginDiv">
       {error && <Callout intent="danger">{error}</Callout>}
       <form onSubmit={formSubmitHandler} className="auth-form">
-        <FormGroup label="Email" labelFor="email">
+        <FormGroup label="" labelFor="email">
           <InputGroup
             id="email"
             placeholder="Email"
@@ -57,7 +58,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </FormGroup>
-        <FormGroup label="Password" labelFor="password">
+        <FormGroup label="" labelFor="password">
           <InputGroup
             id="password"
             placeholder="Password"
@@ -67,13 +68,14 @@ const Login = () => {
           />
         </FormGroup>
         <Button
-          intent="primary"
+          intent="warning"
           disabled={isSubmitting}
           text={`${isSubmitting ? "Signing In" : "Sign In"}`}
           fill
           type="submit"
         />
       </form>
+      </div>
     </>
   );
 };

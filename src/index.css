@@ -49,11 +49,20 @@ a:hover {
   background-color: #FCD757;
 }
 
-
 .auth-form {
   margin-top: 10px;
 }
 
+.loginForm {
+  position:relative;
+  display: flex;
+  min-width: 100px;
+  max-width: 25%;
+  margin-top: 50px;
+  align-items: center;
+  margin-left: 40%;
+
+}
 .loader {
   margin: 100px auto;
 }
@@ -67,3 +76,10 @@ a:hover {
   flex-direction: column;
 }
 
+.loginWelcome {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
